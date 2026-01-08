@@ -9,7 +9,7 @@ import apiClient, { handleApiError, uploadFile } from '../lib/api/client';
 import { saveListings, getListings } from '../lib/storage/indexedDB';
 
 interface MarketplaceState {
-  listings: Listing[];
+  listings: MarketplaceListing[];
   myListings: MarketplaceListing[];
   isLoading: boolean;
   hasMore: boolean;
