@@ -35,6 +35,11 @@ export const Sidebar: React.FC = () => {
 
   return (
     <aside className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
+      <div className={styles.brandHeader}>
+        <img src="/logo.png" alt="Locrave" className={styles.brandLogo} />
+        <span className={styles.brandName}>Locrave</span>
+      </div>
+
       <nav className={styles.nav}>
         {filteredNavItems.map((item) => (
           <NavLink

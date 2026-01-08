@@ -46,6 +46,12 @@
   text-decoration: none;
 }
 
+.logoImage {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
 .logoText {
   font-size: 1.25rem;
   font-weight: 700;
@@ -109,6 +115,11 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  .logoImage {
+    width: 32px;
+    height: 32px;
+  }
+
   .logoText {
     font-size: 1rem;
   }

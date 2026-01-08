@@ -25,6 +25,7 @@ export const Header: React.FC = () => {
             ☰
           </button>
           <Link to="/feed" className={styles.logo}>
+            <img src="/logo.png" alt="Locrave" className={styles.logoImage} />
             <span className={styles.logoText}>Locrave</span>
           </Link>
         </div>

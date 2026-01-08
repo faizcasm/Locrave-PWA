@@ -44,6 +44,7 @@ const LoginPage: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.header}>
+          <img src="/logo.png" alt="Locrave Logo" className={styles.logo} />
           <h1 className={styles.title}>Welcome to Locrave</h1>
           <p className={styles.subtitle}>Connect with your local community</p>
         </div>
