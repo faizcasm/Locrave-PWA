@@ -24,7 +24,7 @@ interface FeedState {
   clearError: () => void;
 }
 
-export const useFeedStore = create<FeedState>((set, get) => ({
+export const useFeedStore = create<FeedState>((set) => ({
   posts: [],
   isLoading: false,
   isLoadingMore: false,

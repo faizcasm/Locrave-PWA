@@ -55,7 +55,7 @@ const FeedPage: React.FC = () => {
   const handleComment = (postId: string) => {
     // TODO: Open comment modal or navigate to post detail
     console.log('Comment on post:', postId);
-    toast.info('Comment feature coming soon!');
+    toast('Comment feature coming soon!');
   };
 
   const handleReport = (postId: string) => {

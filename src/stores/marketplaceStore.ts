@@ -4,7 +4,7 @@ import {
   CreateListingRequest,
   UpdateListingRequest,
 } from '../types/marketplace.types';
-import { PaginatedResponse } from '../types/global.types';
+import { PaginatedResponse, MarketplaceStatus } from '../types/global.types';
 import apiClient, { handleApiError, uploadFile } from '../lib/api/client';
 import { saveListings, getListings } from '../lib/storage/indexedDB';
 
@@ -138,10 +138,10 @@ export const useMarketplaceStore = create<MarketplaceState>((set) => ({
       await apiClient.patch(`/marketplace/${id}/sold`);
       set((state) => ({
         listings: state.listings.map((listing) =>
-          listing.id === id ? { ...listing, status: 'SOLD' as const } : listing
+          listing.id === id ? { ...listing, status: MarketplaceStatus.SOLD } : listing
         ),
         myListings: state.myListings.map((listing) =>
-          listing.id === id ? { ...listing, status: 'SOLD' as const } : listing
+          listing.id === id ? { ...listing, status: MarketplaceStatus.SOLD } : listing
         ),
       }));
     } catch (error) {

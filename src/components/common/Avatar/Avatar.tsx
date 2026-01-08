@@ -31,7 +31,7 @@ const getColorFromName = (name: string): string => {
     '#14b8a6',
   ];
   const index = name.charCodeAt(0) % colors.length;
-  return colors[index] || colors[0];
+  return colors[index] ?? colors[0] ?? '#6366f1';
 };
 
 export const Avatar: React.FC<AvatarProps> = ({

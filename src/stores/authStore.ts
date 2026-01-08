@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { User, AuthTokens, LoginRequest, VerifyOtpRequest } from '../types/user.types';
+import { User, LoginRequest, VerifyOtpRequest } from '../types/user.types';
 import apiClient, { handleApiError } from '../lib/api/client';
 import { secureStorage } from '../lib/storage/secureStorage';
 import { socketClient } from '../lib/socket/client';

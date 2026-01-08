@@ -1,9 +1,9 @@
 import React from 'react';
-import { Post as PostType } from '../../../types/post.types';
-import { Card } from '../../common/Card/Card';
-import { Avatar } from '../../common/Avatar/Avatar';
-import { Button } from '../../common/Button/Button';
-import { formatDistanceToNow } from '../../../utils/dateUtils';
+import type { Post as PostType } from '../../../../types/post.types';
+import { Card } from '../../../common/Card/Card';
+import { Avatar } from '../../../common/Avatar/Avatar';
+import { Button } from '../../../common/Button/Button';
+import { formatDistanceToNow } from '../../../../utils/dateUtils';
 import styles from './PostCard.module.css';
 
 interface PostCardProps {
@@ -59,7 +59,7 @@ export const PostCard: React.FC<PostCardProps> = ({
 
         {post.images && post.images.length > 0 && (
           <div className={styles.images}>
-            {post.images.map((image, index) => (
+            {post.images.map((image: string, index: number) => (
               <img
                 key={index}
                 src={image}
